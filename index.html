@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Drag and Resize Example</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+    <div id="partA" class="part" ondrop="drop(event, 'A')" ondragover="allowDrop(event)">
+        A
+    </div>
+    <div id="partB" class="part" ondrop="drop(event, 'B')" ondragover="allowDrop(event)">
+        B
+    </div>
+    <div id="partC" class="part" ondrop="drop(event, 'C')" ondragover="allowDrop(event)">
+        C
+    </div>
+    <div id="partD" class="part" ondrop="drop(event, 'D')" ondragover="allowDrop(event)">
+        D
+    </div>
+    <div id="default" class="box-temp" ondrop="drop(event, 'default')" ondragover="allowDrop(event)">
+    </div>
+
+    <div id="box" class="box" draggable="true" ondragstart="drag(event)">Box</div>
+
+    <div id="dragx" class="separator-x" onmousedown="startResizeX(event)"></div>
+    <div id="dragy" class="separator-y" onmousedown="startResizeY(event)"></div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

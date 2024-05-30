@@ -1,0 +1,86 @@
+#container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 500px;
+    position: relative;
+}
+.part {
+    border: 2px solid rgb(8, 0, 0);
+}
+.box, .box-temp {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+}
+.separator-x {
+    width: 100%;
+    height: 5px; /* Set the height of the separator lines */
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    cursor: ns-resize;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.separator-y {
+    width: 5px; /* Set the width of the separator lines */
+    height: 100%;
+    background-color: rgb(3, 0, 0);
+    position: absolute;
+    cursor: ew-resize;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+div#container > .box,  div#container > .box-temp {
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}
+div#default {
+    background: unset;
+}
+
+div#partA .box {
+    left: 0;
+    top: 0;
+}
+div#partB .box {
+    right: 0;
+    top: 0;
+}
+div#partC .box {
+    left: 0;
+    bottom: 0;
+}
+div#partD .box {
+    right: 0;
+    bottom: 0;
+}
+div#partA {
+    font-size: 24px;
+    color:#000000;
+    background-color:#D27D78;
+}
+div#partB {
+    font-size: 24px;
+    color:#000000;
+    background-color: #7DC8D2;
+}
+div#partC {
+    font-size: 24px;
+    color:#000000;
+    background-color:#9164B9;
+}
+div#partD {
+    font-size: 24px;
+    color:#000000;
+    background-color: #64B964;
+}
